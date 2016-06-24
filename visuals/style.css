@@ -5,11 +5,20 @@
 }
 
 body {
-	padding: 100px 0 150px 0;
 	background: #f6f6f5;
 }
 
-.holder:after {
+.grid {
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.grid-item {
+	width: 600px;
+	margin-bottom: 20px;
+}
+
+.property:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -35,11 +44,7 @@ a:hover {
 }
 
 .modelTitle {
-	position: relative;
-	width: 500px;
-	margin: 0 auto 0 auto;
-	margin-top: 5px;
-	margin-bottom: 15px;	
+	margin: 10px 0;
 }
 
 .modelTitle code {
@@ -50,50 +55,36 @@ a:hover {
 }
 
 .models {
-	position: relative;
-	width: 500px;
-	margin: 0 auto 0 auto;
-	padding: 30px 0 30px 20px;
-	margin-bottom: 30px;
-	margin-top: 30px;
+	padding: 30px;
 	background-color: #fdfdfc;
 	border: 1px solid #c6c6c6;
 }
 
-.keyName {
-	width: 250px;
-	position: relative;
-	float: left;
+.propType {
+	float: right;
+	padding-right: 20px;
 }
 
-.keyName code {
+code {
 	color: #000;
 }
 
-.keyType {
-	width: 250px;
-	position: relative;
-	float: left;
-}
-
-.keyType code span.numberType {
+.numberType {
 	color: #009926;
 }
 
-.keyType code span.dateType {
+.dateType {
 	color: #666;
 }
 
-.keyType code span.stringType {
+.stringType {
 	color: #dd1144;
 }
 
-.keyType code span.booleanType {
+.booleanType {
 	color: #0086b3;
 }
 
-.keyType code span.otherType {
+.otherType {
 	color: #666;
 }
-
-/* EOF */

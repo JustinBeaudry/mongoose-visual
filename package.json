@@ -1,23 +1,33 @@
 {
   "name": "mongoose-visual",
-  "description": "Generate a styled HTML document representing your loaded Mongoose.js Models",
-  "version": "0.1.0",
-  "author" : "Edward Hotchkiss",
-  "maintainers":[
-    { "name":"Edward Hotchkiss", "email":"edward@edwardhotchkiss.com" }
+  "description": "Generate HTML output based upon Mongoose Models",
+  "version": "1.0.0",
+  "author": "Justin Beaudry",
+  "maintainers": [
+    {
+      "name": "Justin Beaudry",
+      "email": "beaudry.justin@gmail.com"
+    }
   ],
-  "repository":{
-    "type":"git", "url":"git://github.com/edwardhotchkiss/mongoose-visual.git"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justinbeaudry/mongoose-visual.git"
   },
-  "keywords": ["mongoose", "model", "schema", "visual"],
+  "keywords": [
+    "mongoose",
+    "model",
+    "schema",
+    "visual"
+  ],
   "bin": {
     "mongoosevisual": "./bin/mongoose-visual.js"
   },
-  "dependencies" : {
-    "express":"2.5.9",
-    "mongoose":"2.6.7"
-  },
-  "engines": { 
-    "node": ">= 0.6.18"
+  "dependencies": {
+    "commander": "^2.9.0",
+    "dust": "^0.3.0",
+    "dustjs-linkedin": "^2.7.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.1",
+    "underscore": "^1.8.3"
   }
 }

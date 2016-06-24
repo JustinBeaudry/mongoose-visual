@@ -1,18 +1,20 @@
 #!/usr/bin/env node
+'use strict';
 
-/**
- * @name Mongoose Visualizer
- * @description
- * Generate a human readable document to show a biz
- * dev guy your data models so that they can point and
- * say "yes, no, add x, add y, so so so …"
- * Fast project to display nicely formated data models json or html
- **/
+var visual  = require('../lib/mongoose-visual');
+var program = require('commander');
+var pkg     = require('../package.json');
 
-// main lib
-var visual = require('../lib/mongoose-visual');
+program
+  .version(pkg.version)
+  .option('-d, --docs', 'Generate docs')
+  .option('-s, --server', 'Start server')
+  .parse(process.argv);
 
-// process
-visual(process.argv.slice(2));
-
-/* EOF */
+if (program.docs) {
+  visual.docs(program.docs[0]);
+} else if (program.server) {
+  visual.server();
+} else {
+  program.outputHelp();
+}

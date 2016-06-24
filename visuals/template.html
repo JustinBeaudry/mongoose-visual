@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mongoose Visuals</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div class="grid">
+		<%= content %>
+	</div>
+	<script src="//npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+	<script>
+		new Masonry('.grid', {
+			fillWidth: true,
+			gutter: 20
+		});
+	</script>
+</body>
+</html>

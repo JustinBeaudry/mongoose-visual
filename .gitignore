@@ -1,3 +1,17 @@
-node_modules/
+# artifacts
+.DS_Store
+.svn
+*~
+*.swp
+*.rbc
+
+# JetBrains
 .idea
-.DS_STORE
+
+# logs
+npm-debug.log
+newrelic_agent.log
+
+# app code exclusions
+node_modules/
+build/

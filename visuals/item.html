@@ -1,0 +1,37 @@
+<div class="grid-item">
+	<div class="model-title">
+		<% if (link) { %>
+			<a href="<%= link %>" target="_blank">
+		<% } %>
+			<code>
+				<%= title %>
+			</code>
+		<% if (link) { %>
+			</a>
+		<% } %>
+	</div>
+	<div class="models">
+		<div id="<%= title %>">
+			<% _.each(props, function(prop) { %>
+				<% if (prop.name !== 'id' && prop.name !== '_id') { %>
+					<div class="property">
+						<div>
+							<% if (prop.ref) { %>
+								<a href="#<%= prop.ref.toLowerCase() %>">
+							<% } %>
+							<code>
+								<%= prop.name %>
+								<span class="prop-type <%= prop.typeClass %>">
+									<%= '{ ' + (prop.type || 'Other') + ' }' %>
+								</span>
+							</code>
+							<% if (prop.ref) { %>
+								</a>
+							<% } %>
+						</div>
+					</div>
+				<% } %>
+			<% }); %>
+		</div>
+	</div>
+</div>
